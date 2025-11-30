@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Milk Tea Secretary</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/html5-qrcode" type="text/javascript"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Zen Maru Gothic', sans-serif;
+        background-color: #FDFBF7;
+        color: #5D4037;
+        overscroll-behavior: none; /* Prevent pull-to-refresh on mobile */
+      }
+      
+      /* Hide scrollbar for Chrome, Safari and Opera */
+      ::-webkit-scrollbar {
+        display: none;
+      }
+
+      /* Hide scrollbar for IE, Edge and Firefox */
+      * {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+      }
+
+      /* Markdown Table Styling for Transport Info */
+      .prose table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        font-size: 0.9rem;
+      }
+      .prose th {
+        background-color: #e6d0c0; /* milktea-200 */
+        color: #5d4037; /* milktea-800 */
+        padding: 0.75rem;
+        text-align: left;
+        font-weight: 600;
+        border-radius: 8px 8px 0 0;
+      }
+      .prose td {
+        background-color: #faf7f5; /* milktea-50 */
+        border-bottom: 1px solid #e6d0c0;
+        padding: 0.75rem;
+        color: #5d4037;
+      }
+      .prose tr:last-child td {
+        border-bottom: none;
+      }
+      .prose tr:last-child td:first-child {
+        border-bottom-left-radius: 8px;
+      }
+      .prose tr:last-child td:last-child {
+        border-bottom-right-radius: 8px;
+      }
+    </style>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              milktea: {
+                50: '#faf7f5',
+                100: '#f3e5d8', // Very light milk tea
+                200: '#e6d0c0',
+                300: '#d7ccc8', // Light brown
+                400: '#bcaaa4',
+                500: '#a1887f', // Base brown
+                600: '#8d6e63', // Primary text
+                700: '#795548',
+                800: '#5d4037', // Dark coffee
+                900: '#3e2723',
+              }
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "react-markdown": "https://aistudiocdn.com/react-markdown@^10.1.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>

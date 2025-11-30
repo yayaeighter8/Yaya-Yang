@@ -1,0 +1,8 @@
+{
+  "name": "Milk Tea Secretary",
+  "description": "A minimalist, milk-tea colored personal secretary app for medication tracking, hydration, daily info, and AI assistance.",
+  "requestFramePermissions": [
+    "geolocation",
+    "camera"
+  ]
+}
